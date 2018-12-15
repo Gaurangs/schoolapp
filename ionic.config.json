@@ -1,5 +1,13 @@
 {
   "name": "schoolApps",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
+  "proxies":[
+    {
+      "path": "api",
+      "proxyUrl": "http://beta.schoolapp.com:1000"
+    }
+  ],
   "type": "angular"
 }

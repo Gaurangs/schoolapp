@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+<img src="assets/logo.png" alt="logo" width="250" height="250" />
+<form [formGroup]="user">
+    <ion-grid>
+        <ion-row>
+            <ion-col>
+                <input type="text" formControlName="username" placeholder="Username or email" required/>
+                <input type="password" formControlName="password" placeholder="Password" style="margin-bottom:30px;" required/>
+                <ion-button class="primary-shade" expand="round" [disabled]="!user.valid" (click)="AuthenticateUser()">Login</ion-button>
+                <ion-button class="secondary-shade" expand="round">Register</ion-button> 
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</form>
+</ion-content>
